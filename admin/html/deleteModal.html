@@ -1,0 +1,23 @@
+<button class='btn btn-danger' data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+<div id="deleteModal" class="modal fade" role="dialog" ng-transclude>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Permanantly delete Sample Student</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Name: </b>Sample Student<br/>
+                    <b>Enrollment Number: </b>110011
+                </p>
+                <p>{{StudentDelete.testDelete}}</p>
+            </div>            
+           <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal" ng-click="Students.deleteStudent($index)">Delete</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div> 

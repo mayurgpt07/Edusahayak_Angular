@@ -1,0 +1,41 @@
+select{
+	width: 80%;
+	padding: 5px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.initial, .aftersubmit{
+	margin-top: 50px;
+	margin-left: 0%;
+	text-align: center;
+	width: 60%;
+  	margin-left: auto;
+  	margin-right: auto; 	
+}
+.aftersubmit{
+	margin-top: -10px;
+	padding-left: 3%;
+	width: 62.2%;
+}
+.initial div{
+	margin-bottom: 10px;
+	background: #eee;
+	padding: 3%;
+}
+.aftersubmit{
+	display: none;
+	margin-bottom: 10px;
+	background: #eee;
+	padding: 20px;
+}
+.aftersubmit button{
+	width: 25%;
+	margin: 1%;
+}
+@media (max-width: 768px){
+	.initial, .aftersubmit{
+		width: 100%;
+	}
+}
