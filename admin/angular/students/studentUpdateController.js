@@ -6,7 +6,7 @@
 
 	function StudentUpdateController($scope, $filter, StudentService){
 		var vm = this;
-		vm.test = 'in update';
+		// vm.test = 'in update';
 		vm.data = {
             student: {},
             institute_Student: {}
@@ -25,9 +25,12 @@
 
 		StudentService.getStudentById().then(function(result){
 			console.log(result.student[0].dateOfBirth);
-			vm.data = result;
-			vm.dateOfBirth = convertDate(result.student[0].dateOfBirth);
-			vm.itstudent_feePaidtillDate = convertDate(result.institute_Student[0].itstudent_feePaidtillDate);
+			vm.data.student = result.student[0];
+			vm.data.institute_Student = result.institute_Student[0];
+			vm.test = vm.data.institute_Student.feestructure;
+			console.log(vm.data.institute_Student.feestructure.feeStructure_id);
+			vm.dateOfBirth = convertDate(vm.data.student.dateOfBirth);
+			vm.itstudent_feePaidtillDate = convertDate(vm.data.institute_Student.itstudent_feePaidtillDate);
 
 		});
 
@@ -44,18 +47,19 @@
 
 		function dateForFees(date){
 			console.log(date);
-			vm.data.institute_Student[0].itstudent_feePaidtillDate = $filter('date')(new Date(date), 'yyyy-MM-dd');
-			console.log(vm.data.institute_Student[0].itstudent_feePaidtillDate);
+			vm.data.institute_Student.itstudent_feePaidtillDate = $filter('date')(new Date(date), 'yyyy-MM-dd');
+			console.log(vm.data.institute_Student.itstudent_feePaidtillDate);
 		}
 
 		function dateForBirth(date){
 			console.log(date);
-			vm.data.student[0].dateOfBirth = $filter('date')(new Date(date), 'yyyy-MM-dd');
-			console.log(vm.data.student[0].dateOfBirth);
+			vm.data.student.dateOfBirth = $filter('date')(new Date(date), 'yyyy-MM-dd');
+			console.log(vm.data.student.dateOfBirth);
 		}
 
 		function updateStudent(){
-			console.log(vm.data);
+			console.log(vm.data.institute_Student.feestructure.feeStructure_id);
+			StudentService.updateStudent(vm.data);
 		}
 
 

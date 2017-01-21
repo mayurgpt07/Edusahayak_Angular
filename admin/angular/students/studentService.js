@@ -24,7 +24,7 @@
         }
 
         function getStudentById(){
-        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId=1').
+        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId=18  ').
         	then(function success(response){
         		console.log(response);
         		return response.data;
@@ -52,7 +52,8 @@
         }
 
         function updateStudent(data){
-            return $http.patch('', data).
+            console.log(data);
+            return $http.patch('http://localhost:8080/EduSahayak/admin/students/update?studentId=18', data).
             then(function success(response){
                 console.log(response);
             }, function error(err){
