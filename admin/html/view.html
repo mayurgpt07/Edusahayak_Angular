@@ -73,137 +73,137 @@
                             <label for="firstname" class="col-md-3 control-label">First Name</label>
                             {{StudentsView.data.student[0].firstname}}
                             <div class="col-md-7">
-                                <input type="text" name="firstname" ng-model="StudentsView.data.student[0].firstname" class="form-control" placeholder="First Name" disabled>
+                                <input type="text" name="firstname" ng-model="StudentsView.data.student.firstname" class="form-control" placeholder="First Name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="middlename" class="col-md-3 control-label">Middle Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="middlename" ng-model="StudentsView.data.student[0].middlename" class="form-control" placeholder="Middle Name" disabled>
+                                <input type="text" name="middlename" ng-model="StudentsView.data.student.middlename" class="form-control" placeholder="Middle Name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="lastname" class="col-md-3 control-label">Last Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="lastname" ng-model="StudentsView.data.student[0].lastname" class="form-control" placeholder="Last Name" disabled>
+                                <input type="text" name="lastname" ng-model="StudentsView.data.student.lastname" class="form-control" placeholder="Last Name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="fathername" class="col-md-3 control-label">Father's Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="fathername" ng-model="StudentsView.data.student[0].fathername" class="form-control" placeholder="Father's Name" disabled>
+                                <input type="text" name="fathername" ng-model="StudentsView.data.student.fathername" class="form-control" placeholder="Father's Name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mothername" class="col-md-3 control-label">Mother's Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="mothername" ng-model="StudentsView.data.student[0].mothername" class="form-control" placeholder="Mother's Name" disabled>
+                                <input type="text" name="mothername" ng-model="StudentsView.data.student.mothername" class="form-control" placeholder="Mother's Name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="gender" class="col-md-3 control-label">Gender</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student[0].gender" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student.gender" disabled>
                             </div>
                             <label for="dob" class="col-md-1 control-label">DOB</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="dateOfBirth" ng-model="StudentsView.data.student[0].dateOfBirth" type="text" id='dob' disabled>
+                                <input class="form-control" name="dateOfBirth" ng-model="StudentsView.dateOfBirth" type="date" id='dob' disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-md-3 control-label">Email</label>
                             <div class="col-md-7">
-                                <input type="text" name="email" ng-model="StudentsView.data.student[0].email" class="form-control" placeholder="Email" disabled>
+                                <input type="text" name="email" ng-model="StudentsView.data.student.email" class="form-control" placeholder="Email" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="phone1" class="col-md-3 control-label">Phone 1</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="phone1" ng-model="StudentsView.data.student[0].phone1" type="text" disabled>
+                                <input class="form-control" name="phone1" ng-model="StudentsView.data.student.phone1" type="text" disabled>
                             </div>
                             <label for="phone2" class="col-md-1 control-label">Phone2</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="phone2" ng-model="StudentsView.data.student[0].phone2" type="text" disabled>
+                                <input class="form-control" name="phone2" ng-model="StudentsView.data.student.phone2" type="text" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="addressline1" class="col-md-3 control-label">Address Line 1</label>
                             <div class="col-md-7">
-                                <textarea class="form-control" name="addressLine1" ng-model="StudentsView.data.student[0].addressLine1" rows="2" style="resize: none;" disabled></textarea>
+                                <textarea class="form-control" name="addressLine1" ng-model="StudentsView.data.student.addressLine1" rows="2" style="resize: none;" disabled></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="addressline2" class="col-md-3 control-label">Address Line 2</label>
                             <div class="col-md-7">
-                                <textarea class="form-control" name="addressLine2" ng-model="StudentsView.data.student[0].addressLine2" rows="2" style="resize: none;" disabled></textarea>
+                                <textarea class="form-control" name="addressLine2" ng-model="StudentsView.data.student.addressLine2" rows="2" style="resize: none;" disabled></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pincode" class="col-md-3 control-label">Pincode</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="pincode" ng-model="StudentsView.data.student[0].pincode" type="text" disabled>
+                                <input class="form-control" name="pincode" ng-model="StudentsView.data.student.pincode" type="text" disabled>
                             </div>
                             <label for="city" class="col-md-1 control-label">City</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student[0].city" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student.city" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="state" class="col-md-3 control-label">State</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student[0].state" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.student.state" disabled>
                             </div>
                             <label for="country" class="col-md-1 control-label">Country</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="country" ng-model="StudentsView.data.student[0].country" type="text" disabled>
+                                <input class="form-control" name="country" ng-model="StudentsView.data.student.country" type="text" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="enrollment" class="col-md-3 control-label">Enrollment Number</label>
                             <div class="col-md-7">
-                                <input class="form-control" name="enrollment_no" ng-model="StudentsView.data.student[0].enrollment_no" type="text" disabled>
+                                <input class="form-control" name="enrollment_no" ng-model="StudentsView.data.student.enrollment_no" type="text" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="yearLevel" class="col-md-3 control-label">Year Level</label>
                             <div class="col-md-7">
-                                <input class="form-control" name="yearLevel" ng-model="StudentsView.data.student[0].yearLevel" type="text" disabled>
+                                <input class="form-control" name="yearLevel" ng-model="StudentsView.data.student.yearLevel" type="text" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="standard" class="col-md-3 control-label">Standard</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student[0].itstudent_class" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student.itstudent_class" disabled>
                             </div>
                             <label for="section" class="col-md-1 control-label" >Section</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student[0].itstudent_section" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student.itstudent_section" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="feedate" class="col-md-3 control-label">Fee paid till Date</label>
                             <div class="col-md-7">
-                                <input type="text" class="form-control" name="itstudent_feePaidtillDate" ng-model="StudentsView.data.institute_Student[0].itstudent_feePaidtillDate" disabled>
+                                <input type="date" class="form-control" name="itstudent_feePaidtillDate" ng-model="StudentsView.itstudent_feePaidtillDate" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="scholarship" class="col-md-3 control-label">Scholarship</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_scholarship" ng-model="StudentsView.data.institute_Student[0].itstudent_scholarship">
+                                <input type="text" class="form-control" name="itstudent_scholarship" ng-model="StudentsView.data.institute_Student.itstudent_scholarship">
                             </div>
                             <label for="fine" class="col-md-1 control-label">Fine</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student[0].itstudent_fine" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student.itstudent_fine" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="feeID" class="col-md-3 control-label">Fee Structure ID</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student[0].feeStructure.feeStructure_id" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student.feestructure.feeStructure_id" disabled>
                             </div>
                             <label for="section" class="col-md-1 control-label labelspace">Fee Type</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student[0].feetypedetails.feeTypeDetails_name" disabled>
+                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsView.data.institute_Student.feetypedetails.feeTypeDetails_name" disabled>
                             </div>
                         </div>
                         

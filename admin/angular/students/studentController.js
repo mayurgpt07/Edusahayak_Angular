@@ -20,7 +20,7 @@
             institute_Student: []
         };
         vm.index = undefined;
-        vm.func = func;
+        vm.setIndex = setIndex;
         vm.deleteData = undefined;
         vm.deleteStudent = deleteStudent;
         vm.test = 'Test data';
@@ -38,7 +38,7 @@
             });
         });
 
-        function func(index) {
+        function setIndex(index) {
             console.log(index);
             vm.index = index;
             vm.deleteData = {

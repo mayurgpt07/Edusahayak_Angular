@@ -59,7 +59,7 @@
 
 		function updateStudent(){
 			console.log(vm.data.institute_Student.feestructure.feeStructure_id);
-			StudentService.updateStudent(vm.data);
+			StudentService.filterStudent();
 		}
 
 
