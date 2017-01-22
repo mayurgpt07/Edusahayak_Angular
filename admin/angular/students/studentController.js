@@ -49,7 +49,7 @@
 
         function deleteStudent(studentId) {
             console.log(studentId);
-
+            StudentService.deleteStudent();
         }
     }
 
