@@ -2,10 +2,11 @@
     angular.module('admin').
     controller('StudentViewController', StudentViewController);
 
-    StudentViewController.$inject = ['$scope', '$filter', 'StudentService'];
+    StudentViewController.$inject = ['$scope', '$filter', '$routeParams', 'StudentService'];
 
-    function StudentViewController($scope, $filter, StudentService) {
+    function StudentViewController($scope, $filter, $routeParams, StudentService) {
         var vm = this;
+        console.log($routeParams.studentId);
         vm.test = "View Test";
         vm.itstudent_feePaidtillDate = undefined;
         vm.dateOfBirth = undefined;

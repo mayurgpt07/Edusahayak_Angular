@@ -25,7 +25,7 @@
         }
 
         function getStudentById(){
-        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId=18  ').
+        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId=1').
         	then(function success(response){
         		console.log(response);
         		return response.data;

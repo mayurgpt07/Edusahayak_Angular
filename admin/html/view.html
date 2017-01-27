@@ -71,7 +71,6 @@
                     <form class="form-horizontal addform" name="StudentViewForm">
                         <div class="form-group">
                             <label for="firstname" class="col-md-3 control-label">First Name</label>
-                            {{StudentsView.data.student[0].firstname}}
                             <div class="col-md-7">
                                 <input type="text" name="firstname" ng-model="StudentsView.data.student.firstname" class="form-control" placeholder="First Name" disabled>
                             </div>
@@ -207,7 +206,7 @@
                             </div>
                         </div>
                         
-                        <button type="button" class="btn btn-primary addbutn col-md-offset-5 col-sm-offset-3" ng-click="">Update</button>
+                        <a ng-href="#/admin/students/updateStudent/{{StudentsView.data.student.studentId}}"><button type="button" class="btn btn-primary addbutn col-md-offset-5 col-sm-offset-3">Update</button></a>
                         
                     </form>
                 </div>

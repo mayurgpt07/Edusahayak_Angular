@@ -141,8 +141,8 @@
                                 <td>{{data.institute_Student.itstudent_class}}<sup>th</sup>{{data.institute_Student.itstudent_section}}</td>
                                 <td>Nil</td>
                                 <td class="text-center">
-                                    <a href="view.html"><button class='btn btn-primary'>View</button></a>
-                                    <a href="update.html"><button class='btn btn-primary'>Update</button></a>
+                                    <a ng-href="#/admin/students/viewStudent/{{data.student.studentId}}"><button class='btn btn-primary'>View</button></a>
+                                    <a ng-href="#/admin/students/updateStudent/{{data.student.studentId}}"><button class='btn btn-primary'>Update</button></a>
                                     <button class='btn btn-danger' data-toggle="modal" data-target="#deleteModal" ng-click="Students.setIndex($index)">Delete</button> 
                                     <!-- <delete-student index="{{$index}}"></delete-student> -->
                                 </td>

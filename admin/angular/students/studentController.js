@@ -20,16 +20,20 @@
             institute_Student: []
         };
         vm.index = undefined;
-        vm.setIndex = setIndex;
         vm.deleteData = undefined;
+        vm.combinedData = undefined;
+        vm.setIndex = setIndex;
         vm.deleteStudent = deleteStudent;
         vm.test = 'Test data';
-        vm.combinedData = undefined;
         console.log('StudentsController');
+
+        //Get All the students
         StudentService.getAllStudents().then(function(result) {
             console.log(result);
             vm.data = result;
             console.log(vm.data);
+
+            //Combining data to work under one ng-repeat
             vm.combinedData = vm.data.student.map(function(value, index) {
                 return {
                     student: value,
@@ -38,6 +42,7 @@
             });
         });
 
+        //get the $index of the array of results
         function setIndex(index) {
             console.log(index);
             vm.index = index;
@@ -47,6 +52,7 @@
             };
         }
 
+        //delete Student on studentId
         function deleteStudent(studentId) {
             console.log(studentId);
             StudentService.deleteStudent();

@@ -22,12 +22,12 @@
             controller: 'StudentsAddController',
             controllerAs: 'StudentsAdd'
         }).
-        when('/admin/students/viewStudent',{
+        when('/admin/students/viewStudent/:studentId',{
         	templateUrl: '/html/view.html',
         	controller: 'StudentViewController',
         	controllerAs: 'StudentsView'
         }).
-        when('/admin/students/updateStudent', {
+        when('/admin/students/updateStudent/:studentId', {
             templateUrl: '/html/update.html',
             controller: 'StudentUpdateController',
             controllerAs: 'StudentsUpdate'
