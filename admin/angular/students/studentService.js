@@ -24,8 +24,8 @@
             });
         }
 
-        function getStudentById(){
-        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId=1').
+        function getStudentById(studentId){
+        	return $http.get('http://localhost:8080/EduSahayak/admin/students/getStudentById?studentId='+studentId).
         	then(function success(response){
         		console.log(response);
         		return response.data;
@@ -43,8 +43,8 @@
             });
         }
 
-        function deleteStudent(){
-            return $http.delete('http://localhost:8080/EduSahayak/admin/students/delete?studentId=18').
+        function deleteStudent(studentId){
+            return $http.delete('http://localhost:8080/EduSahayak/admin/students/delete?studentId='+studentId).
             then(function success(response){
                 console.log(response);
             }, function error(err){

@@ -20,23 +20,21 @@
             institute_Student: []
         };
         vm.filter = {
-            sort: undefined,
-            searchType: undefined,
+            sort: "Ascending",
+            searchType: "EnrollmentNO",
             searchText: undefined,
-            fees: undefined,
+            fees: "due",
             standard: []
 
         };
         vm.standard = undefined;
         vm.standardIndex = new Array(15);
-        for(var i=0; i<15; i++){
-            vm.standardIndex[i] = false;
-        }
         vm.index = undefined;
         vm.deleteData = undefined;
         vm.combinedData = undefined;
         vm.setIndex = setIndex;
         vm.deleteStudent = deleteStudent;
+        vm.filterStudent = filterStudent;
         vm.getStandard = getStandard;
         vm.test = 'Test data';
         console.log('StudentsController');
@@ -54,26 +52,33 @@
                     institute_Student: vm.data.institute_Student[index]
                 };
             });
+            for (var i = 0; i < 15; i++) {
+                vm.standardIndex[i] = false;
+            }
         });
 
-        $scope.$watch(function(){
+        $scope.$watch(function() {
             return vm.filter.searchType;
-        }, function(){
+        }, function() {
             console.log(vm.filter.searchType);
         });
 
-        function getStandard(standardIndex){
+
+        // add standards to the array
+        function getStandard(standardIndex) {
             console.log(standardIndex);
-            if(vm.standardIndex[standardIndex] === false){
+            if (vm.standardIndex[standardIndex] === false) {
                 vm.filter.standard.push(vm.standard);
                 vm.standardIndex[standardIndex] = true;
-            }else{
+            } else {
                 console.log(vm.filter.standard.indexOf(vm.standard));
-                vm.filter.standard.splice(vm.filter.standard.indexOf(vm.standard),1);
+                vm.filter.standard.splice(vm.filter.standard.indexOf(vm.standard), 1);
                 vm.standardIndex[standardIndex] = false;
             }
             console.log(vm.filter.standard);
         }
+
+
         //get the $index of the array of results
         function setIndex(index) {
             console.log(index);
@@ -87,7 +92,12 @@
         //delete Student on studentId
         function deleteStudent(studentId) {
             console.log(studentId);
-            StudentService.deleteStudent();
+            StudentService.deleteStudent(studentId);
+        }
+
+        function filterStudent(){
+            console.log(vm.filter);
+            StudentService.filterStudent(vm.filter);
         }
     }
 

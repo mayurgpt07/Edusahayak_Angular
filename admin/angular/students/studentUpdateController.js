@@ -2,11 +2,13 @@
 	angular.module('admin').
 	controller('StudentUpdateController', StudentUpdateController);
 
-	StudentUpdateController.$inject = ['$scope', '$filter', 'StudentService'];
+	StudentUpdateController.$inject = ['$scope', '$filter', '$routeParams', 'StudentService'];
 
-	function StudentUpdateController($scope, $filter, StudentService){
+	function StudentUpdateController($scope, $filter, $routeParams, StudentService){
 		var vm = this;
 		// vm.test = 'in update';
+		console.log($routeParams.studentId);
+		vm.studentId = $routeParams.studentId;
 		vm.data = {
             student: {},
             institute_Student: {}
@@ -23,7 +25,7 @@
 			console.log(vm.dateOfBirth);
 		});
 
-		StudentService.getStudentById().then(function(result){
+		StudentService.getStudentById(vm.studentId).then(function(result){
 			console.log(result.student[0].dateOfBirth);
 			vm.data.student = result.student[0];
 			vm.data.institute_Student = result.institute_Student[0];

@@ -95,34 +95,34 @@
                     <div class="well">
                         <fieldset id="fees_criteria">
                             <legend> Fees</legend>
-                            <label class="radio-inline"><input type="radio" name="optradio" ng-model="Students.filter.fees">Due</label>
-                            <label class="radio-inline"><input type="radio" name="optradio" ng-model="Students.filter.fees">Paid</label>
+                            <label class="radio-inline"><input type="radio" name="optradio" value="due" ng-model="Students.filter.fees">Due</label>
+                            <label class="radio-inline"><input type="radio" name="optradio" value="paid" ng-model="Students.filter.fees">Paid</label>
                         </fieldset>
                     </div>
                     <div class="well">
                         <fieldset id="standard_criteria">
                             <legend>Standard</legend>
                             <label class="checkbox-inline"><input type="checkbox" value="">All</label><br>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'Nursery'" ng-false-value="'null'" ng-change="Students.getStandard(0)">Nursery</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'KG I'" ng-false-value="'null'" ng-change="Students.getStandard(1)">KG I</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'KG II'" ng-false-value="'null'" ng-change="Students.getStandard(2)">KG II</label><br>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'first'" ng-false-value="'null'" ng-change="Students.getStandard(3)">1</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'second'" ng-false-value="'null'" ng-change="Students.getStandard(4)">2</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'third'" ng-false-value="'null'" ng-change="Students.getStandard(5)">3</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'fourth'" ng-false-value="'null'" ng-change="Students.getStandard(6)">4</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'fifth'" ng-false-value="'null'" ng-change="Students.getStandard(7)">5</label><br>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'sixth'" ng-false-value="'null'" ng-change="Students.getStandard(8)">6</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'seventh'" ng-false-value="'null'" ng-change="Students.getStandard(9)">7</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'eight'" ng-false-value="'null'" ng-change="Students.getStandard(10)">8</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'nineth'" ng-false-value="'null'" ng-change="Students.getStandard(11)">9</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'tenth'" ng-false-value="'null'" ng-change="Students.getStandard(12)">10</label><br>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'eleventh'" ng-false-value="'null'" ng-change="Students.getStandard(13)">11</label>
-                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'twelth'" ng-false-value="'null'" ng-change="Students.getStandard(14)">12</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'Nursery'" ng-change="Students.getStandard(0)">Nursery</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'KG I'" ng-change="Students.getStandard(1)">KG I</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'KG II'" ng-change="Students.getStandard(2)">KG II</label><br>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'first'" ng-change="Students.getStandard(3)">1</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'second'" ng-change="Students.getStandard(4)">2</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'third'" ng-change="Students.getStandard(5)">3</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'fourth'" ng-change="Students.getStandard(6)">4</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'fifth'" ng-change="Students.getStandard(7)">5</label><br>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'sixth'" ng-change="Students.getStandard(8)">6</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'seventh'" ng-change="Students.getStandard(9)">7</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'eight'" ng-change="Students.getStandard(10)">8</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'nineth'" ng-change="Students.getStandard(11)">9</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'tenth'" ng-change="Students.getStandard(12)">10</label><br>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'eleventh'" ng-change="Students.getStandard(13)">11</label>
+                            <label class="checkbox-inline"><input type="checkbox" ng-model="Students.standard" ng-true-value="'twelth'" ng-change="Students.getStandard(14)">12</label>
                         </fieldset>
                     </div>
                 </div>
-                
-                <a href="add.html"><button class='btn btn-primary' style="float:right; margin:7px;">Add</button></a>
+                <a><button class='btn btn-primary' ng-click="Students.filterStudent()" style="float:right; margin:7px;">Filter</button></a>
+                <a ng-href="#/admin/students/addStudent"><button class='btn btn-primary' style="float:right; margin:7px;">Add</button></a>
                 <div id="mystudent" class="section-gap">
                     <div id="team-details" class="table-responsive">
                         <table class="table table-bordered">

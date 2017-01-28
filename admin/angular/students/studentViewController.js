@@ -7,6 +7,7 @@
     function StudentViewController($scope, $filter, $routeParams, StudentService) {
         var vm = this;
         console.log($routeParams.studentId);
+        vm.studentId = $routeParams.studentId;
         vm.test = "View Test";
         vm.itstudent_feePaidtillDate = undefined;
         vm.dateOfBirth = undefined;
@@ -16,7 +17,7 @@
             institute_Student: {}
         };
 
-        StudentService.getStudentById().then(function(result) {
+        StudentService.getStudentById(vm.studentId).then(function(result) {
             console.log(result);
             vm.data.student = result.student[0];
             vm.data.institute_Student = result.institute_Student[0];
