@@ -68,167 +68,198 @@
             
             <div class="panel panel-info">
                 <div class="panel-body">
-                    <form class="form-horizontal addform" name="StudentAddForm">
+                    <form class="form-horizontal addform" name="StudentAddForm" novalidate>
                         <div class="form-group">
                             <label for="firstname" class="col-md-3 control-label">First Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="firstname" ng-model="StudentsAdd.data.student.firstname" class="form-control" placeholder="First Name">
+                                <input type="text" name="firstname" ng-required="true" ng-model="StudentsAdd.data.student.firstname" class="form-control" placeholder="First Name">
+                                <p ng-show="StudentAddForm.firstname.$error.required && !StudentAddForm.firstname.$pristine && StudentAddForm.firstname.$invalid">Firstname is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="middlename" class="col-md-3 control-label">Middle Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="middlename" ng-model="StudentsAdd.data.student.middlename" class="form-control" placeholder="Middle Name">
+                                <input type="text" name="middlename" ng-required="true" ng-model="StudentsAdd.data.student.middlename" class="form-control" placeholder="Middle Name">
+                                <p ng-show="StudentAddForm.middlename.$error.required && !StudentAddForm.middlename.$pristine">Middlename is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="lastname" class="col-md-3 control-label">Last Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="lastname" ng-model="StudentsAdd.data.student.lastname" class="form-control" placeholder="Last Name">
+                                <input type="text" name="lastname" ng-required="true" ng-model="StudentsAdd.data.student.lastname" class="form-control" placeholder="Last Name">
+                                <p ng-show="StudentAddForm.lastname.$error.required && !StudentAddForm.lastname.$pristine">Lastname is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="fathername" class="col-md-3 control-label">Father's Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="fathername" ng-model="StudentsAdd.data.student.fathername" class="form-control" placeholder="Father's Name">
+                                <input type="text" name="fathername" ng-required="true" ng-model="StudentsAdd.data.student.fathername" class="form-control" placeholder="Father's Name">
+                                <p ng-show="StudentAddForm.fathername.$error.required && !StudentAddForm.fathername.$pristine">Father's name is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mothername" class="col-md-3 control-label">Mother's Name</label>
                             <div class="col-md-7">
-                                <input type="text" name="mothername" ng-model="StudentsAdd.data.student.mothername" class="form-control" placeholder="Mother's Name">
+                                <input type="text" name="mothername" ng-required="true" ng-model="StudentsAdd.data.student.mothername" class="form-control" placeholder="Mother's Name">
+                                <p ng-show="StudentAddForm.mothername.$error.required && !StudentAddForm.mothername.$pristine">Mother's name is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="gender" class="col-md-3 control-label">Gender</label>
                             <div class="col-md-3">
-                                <label class="radio-inline"><input type="radio" ng-model="StudentsAdd.data.student.gender" value="Male">Male</label>
-                                <label class="radio-inline"><input type="radio" ng-model="StudentsAdd.data.student.gender" value="Female">Female</label>
+                                <label class="radio-inline"><input type="radio" ng-required="true" ng-model="StudentsAdd.data.student.gender" value="Male">Male</label>
+                                <label class="radio-inline"><input type="radio" ng-required="true" ng-model="StudentsAdd.data.student.gender" value="Female">Female</label>
                             </div>
                             <label for="dob" class="col-md-1 control-label">DOB</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="dateOfBirth" ng-model="StudentsAdd.dateOfBirth" type="date" id='dob'> 
+                                <input class="form-control" name="dateOfBirth" ng-required="true" ng-model="StudentsAdd.dateOfBirth" type="date" id='dob'>
+                                <span ng-show="StudentAddForm.dateOfBirth.$error.required && !StudentAddForm.dateOfBirth.$pristine">Date Of Birth is required.</span>
+                                <span ng-show="StudentAddForm.dateOfBirth.$error.date">Date Of Birth is wrong</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-md-3 control-label">Email</label>
                             <div class="col-md-7">
-                                <input type="text" name="email" ng-model="StudentsAdd.data.student.email" class="form-control" placeholder="Email">
+                                <input type="email" name="email" ng-required="true" ng-model="StudentsAdd.data.student.email" class="form-control" placeholder="Email">
+                                <span ng-show="StudentAddForm.email.$error.required && !StudentAddForm.email.$pristine">Email is required.</span>
+                                <span ng-show="StudentAddForm.email.$error.email">
+                                Not valid email!</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="phone1" class="col-md-3 control-label">Phone 1</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="phone1" ng-model="StudentsAdd.data.student.phone1" type="text">
+                                <input class="form-control" name="phone1" ng-required="true" ng-model="StudentsAdd.data.student.phone1" type="number">
+                                <span ng-show="StudentAddForm.phone1.$error.required && !StudentAddForm.phone1.$pristine">Phone number is required.</span>
+                                <span ng-show="StudentAddForm.phone1.$error.number">Enter Correct number</span>
                             </div>
                             <label for="phone2" class="col-md-1 control-label">Phone2</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="phone2" ng-model="StudentsAdd.data.student.phone2" type="text">
+                                <input class="form-control" name="phone2" ng-model="StudentsAdd.data.student.phone2" type="number">
+                                <span ng-show="StudentAddForm.phone1.$error.number">Enter Correct number</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="addressline1" class="col-md-3 control-label">Address Line 1</label>
                             <div class="col-md-7">
-                                <textarea class="form-control" name="addressLine1" ng-model="StudentsAdd.data.student.addressLine1" rows="2" style="resize: none;"></textarea>
+                                <textarea class="form-control" name="addressLine1" ng-required="true" ng-model="StudentsAdd.data.student.addressLine1" rows="2" style="resize: none;"></textarea>
+                                <p ng-show="StudentAddForm.addressLine1.$error.required && !StudentAddForm.addressLine1.$pristine">Address is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="addressline2" class="col-md-3 control-label">Address Line 2</label>
                             <div class="col-md-7">
-                                <textarea class="form-control" name="addressLine2" ng-model="StudentsAdd.data.student.addressLine2" rows="2" style="resize: none;"></textarea>
+                                <textarea class="form-control" name="addressLine2" ng-required="true" ng-model="StudentsAdd.data.student.addressLine2" rows="2" style="resize: none;"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pincode" class="col-md-3 control-label">Pincode</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="pincode" ng-model="StudentsAdd.data.student.pincode" type="text">
+                                <input class="form-control" name="pincode" ng-required="true" ng-model="StudentsAdd.data.student.pincode" type="number">
+                                <span ng-show="StudentAddForm.pincode.$error.required && !StudentAddForm.pincode.$pristine">Pincode is required.</span>
+                                <span ng-show="StudentAddForm.pincode.$error.number">Invalid pincode</span>
                             </div>
                             <label for="city" class="col-md-1 control-label">City</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.student.city">
+<!--                                 <select class="form-control" ng-required="true" ng-model="StudentsAdd.data.student.city">
                                     <option value="Noida">Noida</option>
                                     <option value="Delhi">Delhi</option>
                                     <option value="Greater Noida">greater Noida</option>
-                                </select>
+                                </select> -->
+                                 <input class="form-control" name="city" ng-required="true" ng-model="StudentsAdd.data.student.city" type="text">
+                                 <span ng-show="StudentAddForm.city.$error.required && !StudentAddForm.city.$pristine">City is required</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="state" class="col-md-3 control-label">State</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.student.state">
+                                <select class="form-control" ng-required="true" name="state" ng-model="StudentsAdd.data.student.state">
+                                    <option value="">Enter State</option>
                                     <option value="Maharashtra">Maharashtra</option>
                                     <option value="Rajasthan">Rajasthan</option>
                                     <option value="Gujarat">Gujarat</option>
                                 </select>
+                                <span ng-show="StudentAddForm.state.$error.required && !StudentAddForm.state.$pristine">State is required</span>
                             </div>
                             <label for="country" class="col-md-1 control-label">Country</label>
                             <div class="col-md-3">
-                                <input class="form-control" name="country" ng-model="StudentsAdd.data.student.country" type="text" disabled value="India">
+                                <input class="form-control" name="country" ng-required="true" ng-model="StudentsAdd.data.student.country" type="text" disabled value="India">
+                                <p ng-show="StudentAddForm.country.$error.required && !StudentAddForm.country.$pristine">Country is required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="enrollment" class="col-md-3 control-label">Enrollment Number</label>
                             <div class="col-md-7">
-                                <input class="form-control" name="enrollment_no" ng-model="StudentsAdd.data.student.enrollment_no" type="text">
+                                <input class="form-control" name="enrollment_no" ng-required="true" ng-model="StudentsAdd.data.student.enrollment_no" type="number">
+                                <span ng-show="StudentAddForm.enrollment_no.$error.required && !StudentAddForm.enrollment_no.$pristine">Enrollment Number is required.</span>
+                                <span ng-show="StudentAddForm.enrollment_no.$error.number">Enter valid Enrollment Number</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="yearLevel" class="col-md-3 control-label">Year Level</label>
                             <div class="col-md-7">
-                                <input class="form-control" name="yearLevel" ng-model="StudentsAdd.data.student.yearLevel" type="text">
+                                <input class="form-control" name="yearLevel" ng-required="true" ng-model="StudentsAdd.data.student.yearLevel" type="text">
+                                <p ng-show="StudentAddForm.yearLevel.$error.required && !StudentAddForm.yearLevel.$pristine">required.</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="standard" class="col-md-3 control-label">Standard</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.institute_Student.itstudent_class">
+                                <select class="form-control" ng-required="true" name="itstudent_class" ng-model="StudentsAdd.data.institute_Student.itstudent_class">
+                                    <option value="">Select Class</option>
                                     <option value="Nursery">Nursery</option>
                                     <option value="KG I">KG I</option>
                                     <option value="KG II">KG II</option>
                                 </select>
+                                <span ng-show="StudentAddForm.itstudent_class.$error.required && !StudentAddForm.itstudent_class.$pristine">Require class</span>
                             </div>
                             <label for="section" class="col-md-1 control-label" >Section</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.institute_Student.itstudent_section">
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
-                                </select>
+                                <input type="date" class="form-control" name="itstudent_section" ng-required="true" ng-model="SStudentsAdd.data.institute_Student.itstudent_section">
+                                <span ng-show="StudentAddForm.itstudent_section.$error.required && !StudentAddForm.itstudent_section.$pristine">Section is required.</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="feedate" class="col-md-3 control-label">Fee paid till Date</label>
                             <div class="col-md-7">
-                                <input type="date" class="form-control" name="itstudent_feePaidtillDate" ng-model="StudentsAdd.itstudent_feePaidtillDate">
+                                <input type="date" class="form-control" name="itstudent_feePaidtillDate" ng-required="true" ng-model="StudentsAdd.itstudent_feePaidtillDate">
+                                <span ng-show="StudentAddForm.itstudent_feePaidtillDate.$error.required && !StudentAddForm.itstudent_feePaidtillDate.$pristine">Date is required.</span>
+                                <span ng-show="StudentAddForm.itstudent_feePaidtillDate.$error.date">Enter valid date</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="scholarship" class="col-md-3 control-label">Scholarship</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_scholarship" ng-model="StudentsAdd.data.institute_Student.itstudent_scholarship">
+                                <input type="text" class="form-control" name="itstudent_scholarship" ng-required="true" ng-model="StudentsAdd.data.institute_Student.itstudent_scholarship">
+                                <span ng-show="StudentAddForm.itstudent_scholarship.$error.number">Enter valid number</span>
                             </div>
                             <label for="fine" class="col-md-1 control-label">Fine</label>
                             <div class="col-md-3">
-                                <input type="text" class="form-control" name="itstudent_fine" ng-model="StudentsAdd.data.institute_Student.itstudent_fine">
+                                <input type="text" class="form-control" name="itstudent_fine" ng-required="true" ng-model="StudentsAdd.data.institute_Student.itstudent_fine">
+                                <span ng-show="StudentAddForm.itstudent_fine.$error.number">Enter valid number</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="feeID" class="col-md-3 control-label">Fee Structure ID</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.institute_Student.feestructure.feeStructure_id">
+                                <select class="form-control" ng-required="true" name="feeStructure_id" ng-model="StudentsAdd.data.institute_Student.feestructure.feeStructure_id">
+                                    <option value="">Select ID</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option value="3">3</option> 
                                 </select>
+                                <span ng-show="StudentAddForm.feeStructure_id.$error.required && !StudentAddForm.feeStructure_id.$pristine">Require Fee Id</span>
                             </div>
                             <label for="section" class="col-md-1 control-label labelspace">Fee Type</label>
                             <div class="col-md-3">
-                                <select class="form-control" ng-model="StudentsAdd.data.institute_Student.feetypedetails.feeTypeDetails_name">
+                                <select class="form-control" ng-required="true" name="feeTypeDetails_name" ng-model="StudentsAdd.data.institute_Student.feetypedetails.feeTypeDetails_name">
+                                    <option value="">Select Fee Type</option>
                                     <option value="Monthly">Monthly</option>
                                     <option value="Quaterly">Quaterly</option>
                                     <option value="Semi-annualy">Semi-annualy</option>
                                     <option value="Annualy">Annualy</option>
                                 </select>
+                                <span ng-show="StudentAddForm.feeTypeDetails_name.$error.required && !StudentAddForm.feeTypeDetails_name.$pristine">Require Fee Type</span>
                             </div>
                         </div>
                         
