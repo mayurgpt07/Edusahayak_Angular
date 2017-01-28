@@ -62,10 +62,10 @@
             });
         }
 
-        var standard = new Array("MAyur", "MAnsi");
+        // var standard = new Array("MAyur", "MAnsi");
 
-        function filterStudent(){
-            return $http.get('http://localhost:8080/EduSahayak/admin/students/filterStud?sort=Ascending&standard[]='+standard).
+        function filterStudent(data){
+            return $http.post('http://localhost:8080/EduSahayak/admin/students/filterStud',data).
             then(function success(response){
                 console.log(response);
             }, function error(err){
